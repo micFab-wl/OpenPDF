@@ -117,8 +117,11 @@ public class PdfStructureElement extends PdfDictionary {
     }
     
     void setPageMark(int page, int mark) {
-        if (mark >= 0)
-            put(PdfName.K, new PdfNumber(mark));
+        if (mark >= 0) {
+           PdfArray marks = new PdfArray();
+           marks.add(new PdfNumber(mark));
+           put(PdfName.K, marks);
+        }
         top.setPageMark(page, reference);
     }
     
