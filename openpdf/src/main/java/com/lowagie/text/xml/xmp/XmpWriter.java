@@ -192,6 +192,9 @@ public class XmpWriter {
                 else
                     a1.addConformance("B");
                 addRdfDescription(a1);
+            } else if (PdfXConformance == PdfWriter.PDFUA) {
+               PdfUASchema ua = new PdfUASchema();
+               addRdfDescription(ua);
             }
         }
     }

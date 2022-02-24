@@ -1738,6 +1738,8 @@ public class PdfWriter extends DocWriter implements
     public static final int PDFA1A = 3;
     /** PDFA-1B level. */
     public static final int PDFA1B = 4;
+    /** PDFA-UA level. */
+    public static final int PDFUA = 5;
 
     /** Stores the PDF/X level. */
     private PdfXConformanceImp pdfxConformance = new PdfXConformanceImp();
